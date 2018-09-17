@@ -90,12 +90,12 @@
       
         <p>在看到Thinking in Java中的13.6.6替换操作时，在strings/TheReplacements.java中有</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = s.replaceAll(&quot; &#123;2,&#125;&quot;, &quot; &quot;);</span><br><span class="line">s = s.replaceFirst(&quot;(?m)^ +&quot;, &quot;&quot;);</span><br></pre></td></tr></table></figure>
-<p>因为文字叙述部分提到了repalceFirst(String replacement)，以及replaceAll(String replacement)。<br>在查阅Java API时看到java.util.regex.Matcher以及java.lang.String中都有replaceAll方法：<br>java.util.regex.Matcher.repalceAll(String replacement);<br>java.lang.String.replaceAll(String regex, String replacement);<br>所以在代码中用到的是String中的方法（这一点从s是一个String也看得出来T_T）。<br>其中有这样的解释：<br><em>An invocation of this method of the form str.replaceAll(regex, repl) yields exactly the same result as the expression<br>Pattern.compile(regex).matcher(str).replaceAll(repl)</em><br><a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html#replaceAll(java.lang.String,java.lang.String)" target="_blank" rel="noopener">https://docs.oracle.com/javase/10/docs/api/java/lang/String.html#replaceAll(java.lang.String,java.lang.String)</a></p>
+<p>在查阅Java API时看到java.util.regex.Matcher以及java.lang.String中都有replaceAll方法：<br>java.util.regex.Matcher.repalceAll(String replacement);<br>java.lang.String.replaceAll(String regex, String replacement);<br>其中有这样的解释：<br><em>An invocation of this method of the form str.replaceAll(regex, repl) yields exactly the same result as the expression<br>Pattern.compile(regex).matcher(str).replaceAll(repl)</em><br><a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html#replaceAll(java.lang.String,java.lang.String)" target="_blank" rel="noopener">https://docs.oracle.com/javase/10/docs/api/java/lang/String.html#replaceAll(java.lang.String,java.lang.String)</a><br>书中也写到：<br><em>这两个替换操作都只使用了一次replaceAll()，所以与其编译为Pattern，不如直接使用String的replaceAll()方法，开销更小。</em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://morsekong.github.io/2018/09/17/replaceAll-in-Java/" data-id="cjm6gqtkl0001f1xbv8wc2rr3" class="article-share-link">Share</a>
+      <a data-url="http://morsekong.github.io/2018/09/17/replaceAll-in-Java/" data-id="cjm6h68g70003gtxb7edpiy24" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-regex/">Java regex</a></li></ul>
@@ -134,9 +134,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://morsekong.github.io/2018/09/14/mdt/" data-id="cjm6gqtkq0004f1xbz77xwhlo" class="article-share-link">Share</a>
+      <a data-url="http://morsekong.github.io/2018/09/14/mdt/" data-id="cjm6h68g50002gtxbadni7u1e" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
+
     </footer>
   </div>
   
@@ -171,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://morsekong.github.io/2018/09/12/first-try/" data-id="cjm6gqtkh0000f1xb35o502d6" class="article-share-link">Share</a>
+      <a data-url="http://morsekong.github.io/2018/09/12/first-try/" data-id="cjm6h68g30001gtxbfz51n020" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://morsekong.github.io/2018/09/12/hello-world/" data-id="cjm6gqtkn0002f1xb051xnqyx" class="article-share-link">Share</a>
+      <a data-url="http://morsekong.github.io/2018/09/12/hello-world/" data-id="cjm6h68fy0000gtxbp0higu6h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +241,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-regex/">Java regex</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-regex/">Java regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/">test</a></li></ul>
     </div>
   </div>
 
@@ -249,7 +251,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java-regex/" style="font-size: 10px;">Java regex</a>
+      <a href="/tags/Java-regex/" style="font-size: 10px;">Java regex</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
     </div>
   </div>
 
